@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Parisienne&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: rgb(241, 57, 57);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover
+}
+.container {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.heart {
+  width: 20px;
+  height: 20px;
+  background-color: rgb(247, 6, 6);
+  position: absolute;
+  transform: rotate(45deg);
+}
+.heart::before {
+  content: "";
+  top: 0;
+  left: 0;
+  background-color: rgb(247, 6, 6);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  z-index: 1;
+  position: absolute;
+  transform: translate(-50%, 0);
+}
+.heart::after {
+  content: "";
+  top: 0;
+  left: 0;
+  background-color: rgb(247, 6, 6);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  z-index: 1000;
+  position: absolute;
+  transform: translate(0, -50%);
+}
+.label{
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.zIndex{
+  z-index: 1000;
+}
+.title{
+  color : #7719F6; 
+  font-size: 54px;
+  text-align: center;
+  margin-top: 20%;
+}
+.btn{
+  position: absolute;
+  padding: 10px 20px;
+  background-color: #A78BCE;
+  border: none;
+  font-size: 20px;
+  border-radius: 5px;
+}
+.btn:hover{
+  opacity: 0.8;
+}
+.btn-ok{
+  z-index: 1001;
+  top: 50%;
+  left: 30%;
+}
+.btn-back{
+  z-index:1002;
+  top: 50%;
+  left: 60%;
+}
+.result{
+  font-size: 54px;
+  color: red;
+  z-index: 1;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+}
